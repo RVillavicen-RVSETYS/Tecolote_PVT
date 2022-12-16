@@ -49,7 +49,7 @@ function notificaAdmin($link){
 
   $sqlPoliza = "SELECT COUNT(id) AS cant FROM polizas WHERE fechaVence < '$fechaBusqueda' AND estatus = '1'";
   $resPoliza = mysqli_query($link,$sqlPoliza) or die ('<p class="text-danger">Problemas al consultar loas pólizas, Notifica a tu Administrador</p>');
-  #echo $sqlPoliza;
+  //echo $sqlPoliza;
   $pol = mysqli_fetch_array($resPoliza);
   $cantPolizas = 0;
   $cantPol += $pol['cant'];
@@ -59,6 +59,7 @@ function notificaAdmin($link){
                   INNER JOIN aseguradoras ase ON plz.idAseguradora = ase.id
                   WHERE plz.fechaVence < '$fechaBusqueda' AND plz.estatus = '1'
                   GROUP BY plz.idAseguradora";
+   echo $sqlPoliza2;
   $resPoliza2 = mysqli_query($link,$sqlPoliza2) or die ('<p class="text-danger">Problemas al consultar loas pólizas, Notifica a tu Administrador</p>');
   if ($_SESSION['ATZidNivel'] < 3 AND $cantPol > 0) {
    ?>

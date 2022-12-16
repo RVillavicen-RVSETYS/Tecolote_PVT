@@ -4,10 +4,10 @@ date_default_timezone_set('Mexico/General');
 
 /* Database config */
 
-$db_host		= 'localhost';
-$db_user		= 'u619350364_autot';
-$db_pass		= 'Aut0t3z@...';
-$db_database	= 'u619350364_autot';
+$db_host		= 'sql575.main-hosting.eu';
+$db_user		= 'u619350364_tecolote';
+$db_pass		= 'T3c0l0t3D4t4b4s3..';
+$db_database	= 'u619350364_tecolote';
 
 /* End config */
 

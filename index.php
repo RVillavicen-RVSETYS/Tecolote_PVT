@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>AUTOTEZA</title>
+		<title>TECOLOTE</title>
 
 		<!-- BEGIN META -->
 		<meta charset="utf-8">
@@ -37,8 +37,8 @@
 				<div class="card-body">
 					<div class="row">
 						<div class="col-sm-10">
-							<h1 class="text-xxxxl text-primary">AUTOTEZA<br>
-              <small class="text-default-light">S. DE R.L. DE C.V.</small></h1>
+							<h1 class="text-xxxxl text-primary">TECOLOTE<br>
+              <small class="text-default-light">LOGISTIC</small></h1>
               <br/>
 							<img class="img-circle" src="assets/img/logo.jpg">
 

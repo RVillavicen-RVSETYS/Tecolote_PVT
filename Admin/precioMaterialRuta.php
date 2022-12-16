@@ -83,8 +83,7 @@ require_once('../funciones/notificaAdmin.php');
 								<li class="dropdown-header">Aseguradoras</li>
 								<?php
 								while ($listPol = mysqli_fetch_array($resPoliza2)) {
-
-				echo	'<li>
+								echo	'<li>
 									<a class="alert alert-callout alert-warning" href="Encargado/polizas.php">
 										<b><h4><div class="pull-right">'.$listPol['cantPolizas'].'</div></h4></b>
 										<strong>'.$listPol['nombre'].'</strong><br>
@@ -162,7 +161,6 @@ require_once('../funciones/notificaAdmin.php');
 													</div>
 														<div class="col-md-3">
 															<?php
-															require('../include/connect.php');
 															$sql = "SELECT *
 																		FROM catmateriales cmat
 																		WHERE cmat.estatus = 1
@@ -205,7 +203,7 @@ require_once('../funciones/notificaAdmin.php');
 																	WHERE ru.estatus = 1
 																	ORDER BY ru.tipoViaje ASC
 															";
-														//echo $sql;
+														echo $sql;
 														$res = mysqli_query($link,$sql) or die('<p class="text-danger">Notifica al Administrador</p>');
 														?>
 													<select name="ruta" id="ruta" class="form-control" required>

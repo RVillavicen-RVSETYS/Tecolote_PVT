@@ -222,7 +222,7 @@ function cabeceraTkt(){
 			<th colspan="4" align="center"><img class="img-circle" src="../assets/img/logo.png" width="100px"></th>
 		</tr>
 		<tr>
-    	<th colspan="4" align="center" style="font-size:18px">AUTOTEZA</th>
+    	<th colspan="4" align="center" style="font-size:18px">TECOLOTE</th>
 	  </tr>
 		<tr>
     	<th colspan="4" align="center" style="font-size:12px">Axochiapan Mor. México</th>

@@ -83,7 +83,7 @@ function cabeceraTkt(){
 			<th colspan="4" align="center"><a href="../ventas.php"><img class="img-circle" src="../favicon.ico" width="100px"></a></th>
 		</tr>
 		<tr>
-    	<th colspan="4" align="center" style="font-size:18px">AUTOTEZA</th>
+    	<th colspan="4" align="center" style="font-size:18px">TECOLOTE</th>
 	  </tr>
 		<tr>
     	<th colspan="4" align="center" style="font-size:12px">Axochiapan Mor. México</th>

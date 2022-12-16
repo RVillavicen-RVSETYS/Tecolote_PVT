@@ -9,7 +9,7 @@ class conectar
 {
 	
 	public static function conexion(){
-		$link = new mysqli("localhost", "u619350364_autot", "Aut0t3z@...", "u619350364_autot");
+		$link = new mysqli("sql575.main-hosting.eu", "u619350364_tecolote", "T3c0l0t3D4t4b4s3..", "u619350364_tecolote");
 
 
 		if ($link->connect_error) {
