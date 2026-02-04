@@ -79,8 +79,8 @@ $res = mysqli_query($link,$sql) or die('<p class="text-danger">Notifica al Admin
 										        <div class="row">
 										          <div class="col-xs-4">
 										            <address>
-										              <strong>AUTOTRANSPORTES ESPECIALIZADOS
-										                LA ZAFRA S. DE R.L. DE C.V.</strong>
+										              <strong>TYLOG EXPRESS S DE RL DE CV
+										                </strong>
 
 										            </address>
 										          </div><!--end .col -->

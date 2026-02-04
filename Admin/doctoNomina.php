@@ -141,10 +141,8 @@ $subtotal = $Nom['subtotal'] <= '0' ? '$ 0.00' : '$ ' . number_format($Nom['subt
 				<div class="row">
 					<div class="col-xs-4">
 						<address>
-							<strong>AUTOTRANSPORTES ESPECIALIZADOS
-								LA ZAFRA S. DE R.L. DE C.V.</strong><br>
-							EULOGIO VICENTE ALARCON OLIVAR<br>
-							AAOE6103114S1<br>
+							<strong>TYLOG EXPRESS S DE RL DE CV</strong><br>
+							TEX211106SF3<br>
 						</address>
 					</div>
 					<!--end .col -->

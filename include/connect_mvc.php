@@ -9,7 +9,8 @@ class conectar
 {
 	
 	public static function conexion(){
-		$link = new mysqli("82.165.209.227", "RVSetysTest", 'RV53ty5.p4$$wd', "Tecolote");
+		$link = new mysqli("localhost", "u619350364_tecolote", "T3c0l0t3D4t4b4s3..", "u619350364_tecolote");
+
 
 		if ($link->connect_error) {
     		die('Error de Conexión (' . $link->connect_errno . ') '. $link->connect_error);
@@ -24,3 +25,5 @@ class conectar
 		return $link;
 	}
 }
+
+
