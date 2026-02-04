@@ -92,7 +92,7 @@ $idPreFac = (isset($_POST['ident']) AND $_POST['ident'] != '') ? $_POST['ident']
     										            <h1 class="text-light text-default-light">Pre-Factura</h1>
                                     <h1 class="text-light"><i class=" text-accent-dark"> </i><img src="../favicon.ico" width="150" height="150"></h1>
                                     <address>
-    										              <strong>AUTOTRANSPORTES ESPECIALIZADOS LA ZAFRA<br>AAOE6103114S1</strong>
+    										              <strong>TYLOG EXPRESS S DE RL DE CV<br>TEX211106SF3</strong>
     										            </address>
     										          </div>
     										        </div><!--end .row -->

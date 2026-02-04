@@ -11,6 +11,7 @@ class conectar
 	public static function conexion(){
 		$link = new mysqli("82.165.209.227", "RVSetysTest", 'RV53ty5.p4$$wd', "Tecolote");
 
+
 		if ($link->connect_error) {
     		die('Error de Conexión (' . $link->connect_errno . ') '. $link->connect_error);
 		}
@@ -24,3 +25,5 @@ class conectar
 		return $link;
 	}
 }
+
+

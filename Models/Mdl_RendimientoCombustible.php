@@ -66,11 +66,9 @@ class Rendimiento
         INNER JOIN viajes v ON v.id=c.idViaje
         INNER JOIN asignavehiculos av ON av.id=v.idAsignaVehiculo
         WHERE av.idVehiculo='$idVehiculo'
-        AND 	c.fechaReg>='$fechaLimiteA'
-        AND   c.fechaReg<='$fechaLimiteB'
-        
-        ORDER BY c.fechaReg;
-        ";
+        AND DATE_FORMAT( c.fechaReg, '%Y-%m-%d %H:%i:%s' )>='$fechaLimiteA'
+        AND DATE_FORMAT( c.fechaReg, '%Y-%m-%d %H:%i:%s' )<='$fechaLimiteB'
+        ORDER BY c.fechaReg;";
         #AND $filtradoNoIncluyente
         if ($debug == 1) {
           $resultXquery =$link->query($sql);
@@ -98,6 +96,7 @@ class Rendimiento
     public function rendimientoXVehiculo($idVehiculo, $fecha,$fechaReg, $idCarga){
         $debug = $this->debug;
         $link = $this->link;
+        $TotalKm = 0;
         $DataCargas=$this->cargasPeriodicasXVehiculo($idVehiculo, $fecha,$fechaReg, $idCarga);
        # print_r($DataCargas);
         if(is_array( $DataCargas)){
@@ -114,7 +113,8 @@ class Rendimiento
                 $SumaCarga=$SumaCarga+$DataCargas[$i]['cant'];
               
             }
-            $rendimientoAprox= $TotalKm/($SumaCarga-$DataCargas[$i-1]['cant']);
+            $resultSuma = $SumaCarga - $DataCargas[$i - 1]['cant'];
+            $rendimientoAprox = ($resultSuma > 0) ? $TotalKm / $resultSuma : 0 ;
             return $rendimientoAprox;
 
         }else{

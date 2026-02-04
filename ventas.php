@@ -134,7 +134,7 @@ require_once('funciones/notificaAuxiliar.php');
 											</div>
 											<!--end .card-head -->
 											<div class="card-body style-default-bright">
-												<form class="form" role="form" method="post" action="funciones/registraNuevaVenta.php">
+												<form id="registraNuevaVenta" class="form" role="form" method="post" action="funciones/registraNuevaVenta.php">
 													<div class="col-lg-3"><h4>Datos del Cliente </h4></div>
 													<div class="form-group floating-label col-lg-8 align-center">
 														<?php
@@ -341,7 +341,7 @@ require_once('funciones/notificaAuxiliar.php');
 
 												<div class="col-lg-12 text-center">
 													<br>
-													<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+													<button onclick="resetFormulario()" type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 													<button type="submit" class="btn ink-reaction btn-raised btn-primary btn-loading-state" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Cargando...">Agregar</button>
 												</div>
 											</form>
@@ -468,6 +468,10 @@ require_once('funciones/notificaAuxiliar.php');
 			});
 
 		});
+		
+		function resetFormulario() {
+            document.getElementById("registraNuevaVenta").reset();
+        }
 
 		function buscaDest2(ident){
 			$.post("funciones/listaDestino2Senc.php",

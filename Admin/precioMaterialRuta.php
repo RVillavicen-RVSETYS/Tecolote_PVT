@@ -5,8 +5,6 @@ $info->Acceso('precioMaterialRuta.php');
 require '../include/connect.php';
 require_once('../funciones/notificaAdmin.php');
 
-Error_reporting(E_ALL);
-
 ?>
 <!DOCTYPE html>
 <html lang="es">

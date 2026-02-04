@@ -20,13 +20,13 @@ function ticketCargaCombustible($ident){
   $var = mysqli_fetch_array($result);
 
 $identVehiculo = ($var['idVehiculoPersonal'] >= '1') ? $var['idVehiculoPersonal'] : $var['idVehiculoOperador'] ;
-  $sqlKm = "SELECT cgc.id, ve.id AS idVehiculoOperador, MAX(cgc.kilometraje) AS kilometraje2
+  $sqlKm = "SELECT cgc.id, ve.id AS idVehiculoOperador, COALESCE(MAX(cgc.kilometraje)) AS kilometraje2
             FROM vehiculos ve
             INNER JOIN asignavehiculos asg ON ve.id = asg.idVehiculo
             LEFT JOIN viajes vjs ON asg.id = vjs.idAsignaVehiculo
             LEFT JOIN cargacombustible cgc ON vjs.id = cgc.idViaje
             WHERE
-            ve.id = '$identVehiculo' AND cgc.id != '$ident'
+            ve.id = '$identVehiculo' AND cgc.id < '$ident'
             ORDER BY cgc.id DESC
             LIMIT 2";
 
